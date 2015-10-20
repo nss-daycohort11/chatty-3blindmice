@@ -43,4 +43,25 @@ h3 {
 	height: 500px;
 	margin: 20px 0 30px 60px;
 	border: 2px solid black;
+	padding: 50px 20px 20px 20px;
+	text-align: center;
+}
+
+.darken {
+	background-color: #333300;
+	color: white;
+}
+
+
+.giant {
+	font-size: 1.9em;
+}
+
+.delete {
+	margin: 0 0 0 15px;
+}
+
+#entry {
+	font-size: 1.3em;
+	margin: 5px 0 5px 0;
 }

@@ -17,7 +17,7 @@ userMsg.addEventListener("keydown", function whenEnter (keypress) {
 //call function to create data string and button for the messages box
 
 		function stringMessage(message) {
-			msgString += "<div>" + message + "<button class='delete'>Delete</button></div>";
+			msgString += "<div id='entry'>" + message + "<button class='delete'>Delete</button></div>";
 			msgBox.innerHTML = msgString;
 		}
 
@@ -45,15 +45,24 @@ document.querySelector("body").addEventListener("click", function(event) {
 // Clear all messages on the board
 
 clearAll.addEventListener("click", function() {
-	console.log("clearing input")
+	console.log("clearing input");
 	msgBox.innerHTML = "";
-	document.getElementById("checkboxes").checked = false;
-	// clear.setAttribute("disabled", true);
+	document.getElementById("clear").checked = false;
+	clear.setAttribute("disabled", true);
 });
 
+var allThings = document.getElementById("container");
 
-	// handle click events on checkboxes ----I THINK WE NEED AN ID FOR EACH OF THE CHECKBOX TYPES?????
-//var darkTheme = document.getElementById("darkTheme");
-//darkTheme.addEventListener("click", function(){
-//	document.getElementById("checkboxes").classlist.toggle(darkTheme);
+// var messBoxBorder = document.getElementById("messageBox");  //doesn't work
 
+    document.getElementById("dark") 
+        .addEventListener("click", function() {   //do we have to have this function here
+        allThings.classList.toggle("darken");
+        //messBoxBorder.classList.toggle("lightBorder");  //this part doesn't work
+        });
+
+    document.getElementById("bigText")
+        .addEventListener("click", function() {
+        allThings.classList.toggle("giant");
+        });
+	
