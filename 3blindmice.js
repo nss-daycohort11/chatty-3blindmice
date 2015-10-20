@@ -10,15 +10,23 @@ var msgString = "";
 //checking for the enter in user message, if entered put value in variable and call function
 
 userMsg.addEventListener("keydown", function whenEnter (keypress) {
+
 	if (keypress.keyCode === 13) {
+		clearAll.removeAttribute("disabled");
 		var message = userMsg.value;
 		stringMessage(message);
+
+
 
 //call function to create data string and button for the messages box
 
 		function stringMessage(message) {
-			msgString += "<div id='entry'>" + message + "<button class='delete'>Delete</button></div>";
-			msgBox.innerHTML = msgString;
+//			msgString += "<div id='entry'>" + message + "<button class='delete'>Delete</button></div>";
+//			msgBox.innerHTML = msgString;
+			var newElem = document.createElement('div');  //creates new div node
+            newElem.innerHTML = message + "<button class='delete'>Delete</button>";
+            newElem.setAttribute("id", "entry");
+            msgBox.appendChild(newElem);
 		}
 
 //call this function to clear the input in the enter message box
