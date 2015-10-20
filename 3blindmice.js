@@ -52,16 +52,8 @@ clearAll.addEventListener("click", function() {
 });
 
 
-	// handle click events on checkboxes
-//	if (event.target.type === "checkbox") {
-//		// toggle darkTheme class on "messages-container element"
-//		if (event.target.id === "darkTheme") {
-//			document.getElementById("messages-container").classList.toggle("darkTheme");
-//	  	}
-//		// toggle largeText class on "messages-container element"
-//		else if (event.target.id === "largeText") {
-//			document.getElementById("messages-container").classList.toggle("largeText");
-//		}
-//	}
-//});
+	// handle click events on checkboxes ----I THINK WE NEED AN ID FOR EACH OF THE CHECKBOX TYPES?????
+//var darkTheme = document.getElementById("darkTheme");
+//darkTheme.addEventListener("click", function(){
+//	document.getElementById("checkboxes").classlist.toggle(darkTheme);
 
